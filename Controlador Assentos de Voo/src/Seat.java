@@ -11,6 +11,13 @@ public class Seat {
         return passenger == null;
     }
 
+    public boolean allocatePassenger(Passenger passenger) {
+        if (isAvailable()) {
+            this.passenger = passenger;
+            return true;
+        }
+        return false;
+    }
 
 
     public Passenger getPassenger() {

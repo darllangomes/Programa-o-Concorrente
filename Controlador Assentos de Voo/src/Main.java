@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int numSeats =  10 ; // Número de assentos
+        int numSeats =  20 ; // Número de assentos
         int numberOfPassengers; // Quantidade de passageiros a serem embarcados
         Scanner scanner = new Scanner(System.in);
         do {
@@ -13,7 +13,8 @@ public class Main {
             }
         } while (numberOfPassengers < 0);
 
-        Flight flight = new Flight(numSeats);
+        Flight flight = new Flight(numSeats, numberOfPassengers);
+        flight.simulateSeatChoiceInFlight(numberOfPassengers);
 
     }
 }
